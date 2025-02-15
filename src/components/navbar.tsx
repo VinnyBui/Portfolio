@@ -15,22 +15,27 @@ const Navbar = () => {
         </div>
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex gap-10">
-          <Link href="/#about" className="relative inline-flex flex-col items-center group">
+          <button
+            className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
+            onClick={() => {
+              document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             About
-            <span className="w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full mt-1"></span>
-          </Link>
-          <Link href="/#projects" className="relative inline-flex flex-col items-center group">
+          </button>
+          <Link
+            href="/#projects"
+            className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
+          >
             Projects
-            <span className="w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full mt-1"></span>
           </Link>
-          <a 
-            href="/RESUME.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="relative inline-flex flex-col items-center group"
+          <a
+            href="/RESUME.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
           >
             Resume
-            <span className="w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full mt-1"></span>
           </a>
         </nav>
         {/* Mobile Menu (Sheet) */}
@@ -45,26 +50,31 @@ const Navbar = () => {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <nav className="flex flex-col gap-6 mt-6">
                 <SheetClose asChild>
-                  <Link href="/#about" className="relative inline-flex flex-col items-center group font-medium">
+                  <button
+                    className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
+                    onClick={() => {
+                      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
                     About
-                    <span className="w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full mt-1"></span>
-                  </Link>
+                  </button>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href="/#projects" className="relative inline-flex flex-col items-center group font-medium">
+                  <Link
+                    href="/#projects"
+                    className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
+                  >
                     Projects
-                    <span className="w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full mt-1"></span>
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <a 
-                    href="/RESUME.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="relative inline-flex flex-col items-center group font-medium"
+                  <a
+                    href="/RESUME.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
                   >
                     Resume
-                    <span className="w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full mt-1"></span>
                   </a>
                 </SheetClose>
               </nav>

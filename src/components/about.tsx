@@ -91,7 +91,7 @@ const items = [
 
 const About = () => {
   return (
-    <section className="mb-20" id="about">
+    <section id="about">
       <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[20rem] p-10">
         {items.map((item, i) => (
           <BentoGridItem

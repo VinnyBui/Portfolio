@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        border: "var(--border)",
+      },
+      fontFamily: {
+        clash: ["var(--font-clash)", "sans-serif"],
+        chubbo: ["var(--font-chubbo)", "sans-serif"],
+        boska: ["Boska", "sans-serif"],
       },
     },
   },

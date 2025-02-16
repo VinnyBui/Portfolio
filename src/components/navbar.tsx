@@ -23,12 +23,14 @@ const Navbar = () => {
           >
             About
           </button>
-          <Link
-            href="/#projects"
+          <button
             className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
+            onClick={() => {
+              document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Projects
-          </Link>
+          </button>
           <a
             href="/RESUME.pdf"
             target="_blank"
@@ -60,12 +62,14 @@ const Navbar = () => {
                   </button>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link
-                    href="/#projects"
-                    className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
-                  >
-                    Projects
-                  </Link>
+                  <button
+                      className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
+                      onClick={() => {
+                        document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
+                      }}
+                    >
+                      Projects
+                    </button>
                 </SheetClose>
                 <SheetClose asChild>
                   <a

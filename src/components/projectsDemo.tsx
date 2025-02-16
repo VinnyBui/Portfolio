@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import PaginationSelector from "@/components/pageSelector";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 const projects = [
   { 
@@ -16,7 +18,14 @@ const projects = [
     name: "we-buy-cisco.com", 
     media: "/p1.mp4",
     type: "video",
-    description: "Hello" 
+    description: "This is the user interface where customers can view available inventory and add them into a shopping cart. Once added, they can email us the order." 
+  },
+  { 
+    id: 3, 
+    name: "Scripts for Cisco Networks", 
+    media: "/p1.mp4",
+    type: "video",
+    description: "Automation scripts where it will go into the machine's terminal and run various test commands to ensure the machine is in working condition.  " 
   },
 ];
 
@@ -41,7 +50,7 @@ const ProjectsDemo = () => {
         {/* Right Side - Display Project Images */}
         <div className="flex-1 border-l p-8">
           {displayedProjects.map((project) => (
-            <div key={project.id} className="mb-5">
+            <div key={project.id} className="flex flex-col gap-4">
               <video 
                 autoPlay 
                 loop 
@@ -54,6 +63,12 @@ const ProjectsDemo = () => {
               </video>
               <h2 className="text-xl md:text-2xl font-semibold ">{project.name}</h2>
               <p className="text-sm md:text-base">{project.description}</p>
+              <Link href={`/projects#project${project.id}`}>
+                <Button className="hover:bg-black hover:text-white text-black">
+                  Read More
+                </Button>
+              </Link>
+              
             </div>
           ))}
         </div>

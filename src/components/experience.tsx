@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 
@@ -34,7 +33,7 @@ const Experience = () => {
       content: (
         <div>
           <p className="text-white text-sm md:text-base font-clash mb-4">
-            I began working part time at ProNetworks as a Inventory Associate
+            I began working part time at ProNetworks as an Inventory Associate
           </p>
           <ul className="list-disc text-neutral-200 text-xs md:text-sm pl-4">
             <li>Managed product listings on eBay, optimizing descriptions, pricing, and customer communication, increasing sales by 50%.</li>

@@ -5,6 +5,7 @@ import {
   SiFirebase,
   SiReact,
   SiNextdotjs,
+  SiVite,
   SiTailwindcss,
   SiJavascript,
   SiTypescript,
@@ -45,6 +46,7 @@ const items = [
         <strong className="block mt-3">Frontend:</strong>
         <div className="flex items-center gap-3 mt-2 flex-wrap">
           <SiReact size={24} title="React" />
+          <SiVite  size={24} title="Vite" />
           <SiNextdotjs size={24} title="Next.js" />
           <SiTailwindcss size={24} title="Tailwind CSS" />
         </div>

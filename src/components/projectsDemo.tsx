@@ -6,13 +6,17 @@ import PaginationSelector from "@/components/pageSelector";
 const projects = [
   { 
     id: 1, 
-    name: "Project 1", 
-    image: "image1.jpg" 
+    name: "we-buy-cisco.com", 
+    media: "/p2.mp4",
+    type: "video",
+    description: "This is the company's side where only those who are authenticated can have access to deleting, creating, and editing data." 
   },
   { 
     id: 2, 
-    name: "Project 2", 
-    image: "image2.jpg" 
+    name: "we-buy-cisco.com", 
+    media: "/p1.mp4",
+    type: "video",
+    description: "Hello" 
   },
 ];
 
@@ -35,11 +39,21 @@ const ProjectsDemo = () => {
           <PaginationSelector currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
         </div>
         {/* Right Side - Display Project Images */}
-        <div className="flex-1 border-l px-8">
+        <div className="flex-1 border-l p-8">
           {displayedProjects.map((project) => (
             <div key={project.id} className="mb-5">
-              <img src={project.image} alt={project.name} className="w-full h-auto" />
-              <h2 className="text-2xl font-semibold">{project.name}</h2>
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="h-[400px] object-contain"
+              >
+                <source src={project.media} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <h2 className="text-xl md:text-2xl font-semibold ">{project.name}</h2>
+              <p className="text-sm md:text-base">{project.description}</p>
             </div>
           ))}
         </div>

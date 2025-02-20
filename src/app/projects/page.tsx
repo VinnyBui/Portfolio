@@ -8,9 +8,7 @@ export default function ProjectsPage() {
   const searchParams = useSearchParams();
   const projectId = searchParams.get("id");
 
-  if (projectId){
-    const project = projects.find((p) => p.id === projectId);
-    if(!project) return notFound();
-    return <ProjectDetails project={project} />;
-  }
+  const initProjectIndex = projectId ? projects.findIndex((p) => p.id === projectId): 0;
+  if (projectId && initProjectIndex === -1) return notFound();
+    return <ProjectDetails projects={projects} initProjectIndex={initProjectIndex} />;
 }

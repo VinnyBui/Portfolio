@@ -20,7 +20,7 @@ export default function PaginationSelector({ currentPage, totalPages, onPageChan
             onClick={() => onPageChange(currentPage - 1)}
           >
             <ArrowLeft className="-ms-1 me-2 opacity-60 transition-transform group-hover:-translate-x-0.5" size={16} />
-            Previous
+            Previous Project
           </Button>
         </PaginationItem>
         <PaginationItem>
@@ -30,7 +30,7 @@ export default function PaginationSelector({ currentPage, totalPages, onPageChan
             aria-disabled={currentPage === totalPages}
             onClick={() => onPageChange(currentPage + 1)}
           >
-            Next
+            Next Project
             <ArrowRight className="-me-1 ms-2 opacity-60 transition-transform group-hover:translate-x-0.5" size={16} />
           </Button>
         </PaginationItem>

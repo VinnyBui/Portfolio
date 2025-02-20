@@ -13,9 +13,9 @@ const ProjectsDemo = () => {
 
   return (
     <section id="project" className="my-20 mx-auto">
-      <div className="flex h-full flex-col md:flex-row gap-20 md:gap-0">
+      <div className="flex h-full flex-col md:flex-row gap-0">
         {/* Left Side */}
-        <div className="flex flex-col gap-64 px-8">
+        <div className="flex flex-col gap-40 md:gap-64 px-8">
           <div className="flex justify-between text-xs md:text-base">
             <h3>Stuff that I've been working on</h3>
             <h4>Some are professional work, some are just for fun</h4>

@@ -1,14 +1,10 @@
-"use client"
-import { useSearchParams } from "next/navigation";
-import { notFound } from "next/navigation";
-import ProjectDetails from "@/components/projectDetails";
-import { projects } from "@/lib/projectsData";
+import { Suspense } from "react";
+import ProjectsClient from "@/components/ProjectsClient";
 
 export default function ProjectsPage() {
-  const searchParams = useSearchParams();
-  const projectId = searchParams.get("id");
-
-  const initProjectIndex = projectId ? projects.findIndex((p) => p.id === projectId): 0;
-  if (projectId && initProjectIndex === -1) return notFound();
-    return <ProjectDetails projects={projects} initProjectIndex={initProjectIndex} />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectsClient />
+    </Suspense>
+  );
 }

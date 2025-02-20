@@ -48,10 +48,10 @@ const Experience = () => {
       content: (
         <div>
           <p className="text-white text-sm md:text-base font-clash mb-4">
-            I started working at 'The Code School' in Yorba Linda as a tutor. My responsibilities were...
+            I started working at The Code School in Yorba Linda as a tutor. My responsibilities were...
           </p>
           <ul className="list-disc text-neutral-200 text-xs md:text-sm pl-4">
-            <li>Designed and delivered weekly coding lessons, enhancing students' ability to problem-solve like programmers through hands-on exercises.</li>
+            <li>Designed and delivered weekly coding lessons, enhancing students&apos; ability to problem-solve like programmers through hands-on exercises.</li>
             <li>Provided one-on-one coaching, leading to an improvement in Python proficiency among students</li>
             <li>Taught and guided students in programming languages including Scratch, Python, HTML/CSS, and
             JavaScript, managing a class of up to 6 students</li>

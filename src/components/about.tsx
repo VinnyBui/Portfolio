@@ -22,10 +22,10 @@ const items = [
     description: (
       <div>
         <p>
-          Hello, I'm Vinh, a software engineer based in Orange County. I specialize in building web applications and have experience in automation and scripting. I enjoy problem solving and having real world impact.<br/><br/>
+          Hello, I&apos;m Vinh, a software engineer based in Orange County. I specialize in building web applications and have experience in automation and scripting. I enjoy problem solving and having real world impact.<br/><br/>
         </p>
         <p>
-          My expertise includes React, Firebase, and Python, and I'm currently expanding my skills in Next.js. I also have hands-on experience automating network configurations for Cisco devices. I'm always eager to learn new technologies and improve my problem-solving skills, whether it's through software development, automation, or data-driven solutions.
+          My expertise includes React, Firebase, and Python, and I&apos;m currently expanding my skills in Next.js. I also have hands-on experience automating network configurations for Cisco devices. I&apos;m always eager to learn new technologies and improve my problem-solving skills, whether it&apos;s through software development, automation, or data-driven solutions.
         </p>
       </div>
     ),

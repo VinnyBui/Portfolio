@@ -17,7 +17,7 @@ const ProjectsDemo = () => {
         {/* Left Side */}
         <div className="flex flex-col gap-40 md:gap-64 px-8">
           <div className="flex justify-between text-xs md:text-base">
-            <h3>Stuff that I've been working on</h3>
+            <h3>Stuff that I&apos;ve been working on</h3>
             <h4>Some are professional work, some are just for fun</h4>
           </div>
           <h1 className="text-4xl md:text-9xl font-clash font-bold">PROJECTS</h1>

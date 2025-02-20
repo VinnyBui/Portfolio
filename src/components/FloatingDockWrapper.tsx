@@ -5,9 +5,9 @@ import { IconHome, IconTerminal2, IconAddressBook, IconBrandGithub } from "@tabl
 
 export default function FloatingDockWrapper() {
   const links = [
-    { title: "Home", icon: <IconHome className="h-full w-full" />, href: "#home" },
-    { title: "Projects", icon: <IconTerminal2 className="h-full w-full" />, href: "#project" },
-    { title: "Contact", icon: <IconAddressBook className="h-full w-full" />, href: "#contact" },
+    { title: "Home", icon: <IconHome className="h-full w-full" />, href: "/#home" },
+    { title: "Projects", icon: <IconTerminal2 className="h-full w-full" />, href: "/#project" },
+    { title: "Contact", icon: <IconAddressBook className="h-full w-full" />, href: "/#contact" },
     { title: "GitHub", icon: <IconBrandGithub className="h-full w-full" />, href: "https://github.com/VinnyBui" },
   ];
 

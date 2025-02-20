@@ -15,10 +15,10 @@ const ProjectsDemo = () => {
     <section id="project" className="my-20 mx-auto">
       <div className="flex h-full flex-col md:flex-row gap-20 md:gap-0">
         {/* Left Side */}
-        <div className="flex flex-col gap-60 px-8">
+        <div className="flex flex-col gap-64 px-8">
           <div className="flex justify-between text-xs md:text-base">
             <h3>Stuff that I've been working on</h3>
-            <h4>Some are professional work, some are just for fun.</h4>
+            <h4>Some are professional work, some are just for fun</h4>
           </div>
           <h1 className="text-4xl md:text-9xl font-clash font-bold">PROJECTS</h1>
           <PaginationSelector currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />

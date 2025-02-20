@@ -102,7 +102,7 @@ const FloatingDockDesktop = ({
       ([entry]) => {
         setIsVisible(!entry.isIntersecting);
       },
-      { threshold: 0.5}
+      { threshold: 1}
     );
 
     observer.observe(targetSection);

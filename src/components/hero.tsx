@@ -13,7 +13,7 @@ const textVariants = {
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center text-center py-20 mx-auto">
+    <section id="home" className="relative flex items-center text-center py-20 mx-auto">
       <div className="relative flex items-center self-start pl-10 md:pl-60">
         {/* Image */}
         <div className="relative">

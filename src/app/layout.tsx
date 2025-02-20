@@ -1,4 +1,5 @@
 import "./globals.css";
+import FloatingDockWrapper from "@/components/FloatingDockWrapper";
 
 export const metadata = {
   title: "Vinh Bui | Portfolio",
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="relative">
+        {children} 
+        <FloatingDockWrapper />
+      </body>
     </html>
   );
 }

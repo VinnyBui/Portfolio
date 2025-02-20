@@ -96,7 +96,7 @@ export const projects = [
   { 
     id: "3", 
     name: "Scripts for Cisco Networks", 
-    media: "/p1.mp4",
+    media: "",
     type: "video",
     demoDescription: "Automation scripts where it will go into the machine's terminal and run various test commands to ensure the machine is in working condition.",
     overviewDescription: "The Cisco Network Automation Scripts project consists of a series of custom automation scripts designed to test, configure, and validate Cisco networking devices efficiently. These scripts automate repetitive tasks, reducing manual effort and ensuring consistency in network diagnostics and management.",

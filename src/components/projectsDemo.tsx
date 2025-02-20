@@ -27,7 +27,8 @@ const ProjectsDemo = () => {
         <div className="flex-1 border-l p-8">
           {displayedProjects.map((project) => (
             <div key={project.id} className="flex flex-col gap-4">
-              <video 
+              {project.media ? (
+                <video 
                 autoPlay 
                 loop 
                 muted 
@@ -37,6 +38,11 @@ const ProjectsDemo = () => {
                 <source src={project.media} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              ): (
+                <div className="h-[400px] flex items-center justify-center bg-gray-800 text-white">
+                  No Media Available
+                </div>    
+              )}
               <h2 className="text-xl md:text-2xl font-semibold ">{project.name}</h2>
               <p className="text-sm md:text-base">{project.demoDescription}</p>
               <Link href={`/projects?id=${project.id}`}>

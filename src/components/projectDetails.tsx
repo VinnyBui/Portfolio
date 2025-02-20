@@ -6,7 +6,7 @@ import { Tabs } from "@/components/ui/tabs";
 interface Project {
   id: string;
   name: string;
-  media: string;
+  media?: string;
   overviewDescription: string;
   overviewLink: string;
   productDescription: string;
@@ -47,7 +47,8 @@ const ProjectDetails = ({ projects, initProjectIndex }: { projects: Project[]; i
             <h2 className="text-xl md:text-4xl font-bold mb-4">Product/</h2>
             <p>{currentProject.productDescription}</p>
           </div>
-          <video 
+          {currentProject.media ? (
+            <video 
             autoPlay 
             loop 
             muted 
@@ -57,6 +58,9 @@ const ProjectDetails = ({ projects, initProjectIndex }: { projects: Project[]; i
             <source src={currentProject.media} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          ): (
+            <div>No Media Available</div>
+          )}
         </div>
       ),
     },

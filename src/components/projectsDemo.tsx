@@ -38,7 +38,7 @@ const ProjectsDemo = () => {
                 Your browser does not support the video tag.
               </video>
               <h2 className="text-xl md:text-2xl font-semibold ">{project.name}</h2>
-              <p className="text-sm md:text-base">{project.description}</p>
+              <p className="text-sm md:text-base">{project.demoDescription}</p>
               <Link href={`/projects?id=${project.id}`}>
                 <Button className="hover:bg-black hover:text-white text-black">
                   Read More

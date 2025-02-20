@@ -107,7 +107,7 @@ export const projects = [
         <h2 className="text-base md:text-xl font-bold">Tech Stack</h2>
         <ul className="mt-2 list-disc pl-5">
           <li>Python</li>
-          <li>Tools: SecureCRT, PutTV</li>
+          <li>Tools: SecureCRT, PutTTV</li>
           <li>Libraries: Paramiko (SSH), Netmiko</li>
           <li>Logging: Writes logs to local files</li>
         </ul>

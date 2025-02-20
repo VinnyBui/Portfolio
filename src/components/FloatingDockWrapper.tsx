@@ -1,13 +1,13 @@
 "use client";
 
 import { FloatingDock } from "@/components/ui/floating-dock";
-import { IconHome, IconTerminal2, IconAddressBook, IconBrandGithub } from "@tabler/icons-react";
+import { IconHome, IconTerminal2, IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
 
 export default function FloatingDockWrapper() {
   const links = [
     { title: "Home", icon: <IconHome className="h-full w-full" />, href: "/#home" },
     { title: "Projects", icon: <IconTerminal2 className="h-full w-full" />, href: "/#project" },
-    { title: "Contact", icon: <IconAddressBook className="h-full w-full" />, href: "/#contact" },
+    { title: "LinkedIn", icon: <IconBrandLinkedin className="h-full w-full" />, href: "https://www.linkedin.com/in/vinh-bui-46b561220/" },
     { title: "GitHub", icon: <IconBrandGithub className="h-full w-full" />, href: "https://github.com/VinnyBui" },
   ];
 

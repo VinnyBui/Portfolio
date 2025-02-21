@@ -7,7 +7,7 @@ const Experience = () => {
       title: "2024",
       content: (
         <div>
-          <p className="text-white text-sm md:text-base font-clash mb-4">
+          <p className="text-white text-sm md:text-lg font-clash mb-4 font-semibold">
             I began taking on more responsibilities at ProNetworks.
           </p>
           <ul className="list-disc text-neutral-200 text-xs md:text-sm pl-4">
@@ -17,7 +17,7 @@ const Experience = () => {
             automated checks to ensure accuracy in tracking hardware.</li>
             <li>Conducted software testing on the inventory system, identifying and debugging issues to improve system reliability and user experience.</li>
           </ul>
-          <p className="text-white text-sm md:text-base font-clash my-4">
+          <p className="text-white text-sm md:text-lg font-clash my-4 font-semibold">
             I also became a Dance Coordinator for the Vietnamese Student Association at CSUF. 
           </p>
           <ul className="list-disc text-neutral-200 text-xs md:text-sm pl-4">
@@ -32,7 +32,7 @@ const Experience = () => {
       title: "2023",
       content: (
         <div>
-          <p className="text-white text-sm md:text-base font-clash mb-4">
+          <p className="text-white text-sm md:text-lg font-clash mb-4 font-semibold">
             I began working part time at ProNetworks as an Inventory Associate
           </p>
           <ul className="list-disc text-neutral-200 text-xs md:text-sm pl-4">
@@ -47,7 +47,7 @@ const Experience = () => {
       title: "2022",
       content: (
         <div>
-          <p className="text-white text-sm md:text-base font-clash mb-4">
+          <p className="text-white text-sm md:text-lg font-clash mb-4 font-semibold">
             I started working at The Code School in Yorba Linda as a tutor. My responsibilities were...
           </p>
           <ul className="list-disc text-neutral-200 text-xs md:text-sm pl-4">

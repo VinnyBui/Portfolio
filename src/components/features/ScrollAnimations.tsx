@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function BackgroundController() {
+export default function ScrollAnimations() {
   const [isExperienceVisible, setIsExperienceVisible] = useState(false);
 
   useEffect(() => {

@@ -23,6 +23,9 @@ const Navbar = () => {
           <Link
             href="/#about"
             onClick={(e) => {
+              if (window.location.pathname !== '/') {
+                return;
+              }
               e.preventDefault();
               handleScroll("about");
             }}
@@ -31,11 +34,7 @@ const Navbar = () => {
             About
           </Link>
           <Link
-            href="/#project"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("project");
-            }}
+            href="/projects"
             className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
           >
             Projects
@@ -64,6 +63,9 @@ const Navbar = () => {
                   <Link
                     href="/#about"
                     onClick={(e) => {
+                      if (window.location.pathname !== '/') {
+                        return;
+                      }
                       e.preventDefault();
                       handleScroll("about");
                     }}
@@ -74,11 +76,7 @@ const Navbar = () => {
                 </SheetClose>
                 <SheetClose asChild>
                   <Link
-                    href="/#project"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleScroll("project");
-                    }}
+                    href="/projects"
                     className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
                   >
                     Projects

@@ -2,42 +2,51 @@
 import React from "react";
 import { MenuIcon } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent, SheetClose, SheetTitle } from "@/components/ui/sheet";
+import Link from "next/link";
 
 const Navbar = () => {
+  const handleScroll = (elementId: string) => {
+    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header className="top-0 left-0 w-full px-8 md:px-0">
       <div className="max-w-screen-xl w-full mx-auto flex justify-between py-4 mt-20 border-t items-center md:items-start relative">
         {/* Left Section */}
-        <div>
+        <Link href="/" className="no-underline">
           <p>Software Engineer</p>
           <h2 className="font-semibold text-4xl md:text-6xl">Vinh Bui</h2>
-        </div>
+        </Link>
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex gap-10">
-          <button
-            className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
-            onClick={() => {
-              document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+          <Link
+            href="/#about"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll("about");
             }}
+            className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
           >
             About
-          </button>
-          <button
-            className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
-            onClick={() => {
-              document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
+          </Link>
+          <Link
+            href="/#project"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll("project");
             }}
+            className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
           >
             Projects
-          </button>
-          <a
+          </Link>
+          <Link
             href="/RESUME.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
           >
             Resume
-          </a>
+          </Link>
         </nav>
         {/* Mobile Menu (Sheet) */}
         <Sheet>
@@ -51,34 +60,38 @@ const Navbar = () => {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <nav className="flex flex-col gap-6 mt-6">
                 <SheetClose asChild>
-                  <button
-                    className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
-                    onClick={() => {
-                      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                  <Link
+                    href="/#about"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleScroll("about");
                     }}
+                    className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
                   >
                     About
-                  </button>
+                  </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <button
-                      className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
-                      onClick={() => {
-                        document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                    >
-                      Projects
-                    </button>
+                  <Link
+                    href="/#project"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleScroll("project");
+                    }}
+                    className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
+                  >
+                    Projects
+                  </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <a
+                  <Link
                     href="/RESUME.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative inline-flex flex-col items-center border-b-2 border-transparent hover:border-black transition-all duration-300"
                   >
                     Resume
-                  </a>
+                  </Link>
                 </SheetClose>
               </nav>
             </div>

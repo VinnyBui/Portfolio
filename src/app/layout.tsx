@@ -1,5 +1,6 @@
+import Navbar from "@/components/layout/navbar";
 import "./globals.css";
-import FloatingDockWrapper from "@/components/FloatingDockWrapper";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Vinh Bui | Portfolio",
@@ -13,9 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative">
-        {children} 
-        <FloatingDockWrapper />
+      <body className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-1">
+          {children} 
+        </main>
+        <Footer />
       </body>
     </html>
   );

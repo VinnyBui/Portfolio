@@ -1,7 +1,7 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 
-const Experience = () => {
+export default function ExperienceSection() {
   const data = [
     {
       title: "2024",
@@ -66,5 +66,3 @@ const Experience = () => {
     </div>
   );
 }
-
-export default Experience

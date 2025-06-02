@@ -1,18 +1,15 @@
-import Navbar  from "@/components/navbar";
-import Hero from "@/components/hero";
-import About from "@/components/about";
-import Experience from "@/components/experience";
-import ProjectsDemo from "@/components/projectsDemo";
-import Footer from "@/components/Footer";
+import HeroSection from "@/components/sections/heroSection";
+import AboutSection from "@/components/sections/aboutSection";
+import ExperienceSection from "@/components/sections/experienceSection";
+import ProjectsDemoSection from "@/components/sections/projectsDemoSection";
+
 export default function Home() {
   return (
     <div className="max-w-screen-xl mx-auto">
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <ProjectsDemo />
-      <Footer />
+      <HeroSection />
+      <AboutSection />
+      <ExperienceSection />
+      <ProjectsDemoSection />
     </div>
   );
 }

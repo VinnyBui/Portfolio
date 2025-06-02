@@ -91,7 +91,7 @@ const items = [
   
 ];
 
-const About = () => {
+export default function AboutSection() {
   return (
     <section id="about">
       <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[20rem] p-10">
@@ -107,5 +107,3 @@ const About = () => {
     </section>
   );
 }
-
-export default About;

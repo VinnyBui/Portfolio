@@ -61,7 +61,7 @@ export default function ExperienceSection() {
     },
   ];
   return (
-    <div className="w-full">
+    <div id="experience-section" className="w-full">
       <Timeline data={data} />
     </div>
   );

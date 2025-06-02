@@ -11,12 +11,12 @@ const Navbar = () => {
   };
 
   return (
-    <header className="top-0 left-0 w-full px-8 md:px-0">
-      <div className="max-w-screen-xl w-full mx-auto flex justify-between py-4 mt-20 border-t items-center md:items-start relative">
+    <header className="top-0 left-0 mx-8 md:mx-10">
+      <div className="flex justify-between py-4 mt-20 border-t items-center md:items-start relative">
         {/* Left Section */}
         <Link href="/" className="no-underline">
           <p>Software Developer</p>
-          <h2 className="font-semibold text-4xl md:text-6xl">Vinh Bui</h2>
+          <h2 className="font-semibold text-4xl md:text-5xl">Vinh Bui</h2>
         </Link>
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex gap-10">

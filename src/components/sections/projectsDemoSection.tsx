@@ -64,7 +64,7 @@ export default function ProjectsDemoSection() {
               >
                 {/* Fixed height container for media */}
                 <div className="h-[400px] flex items-center justify-center">
-                  {project.type === "video" ? (
+                  {project.media ? (
                     <video 
                       autoPlay 
                       loop 

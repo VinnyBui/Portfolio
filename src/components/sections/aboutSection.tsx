@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import Image from "next/image";
@@ -16,6 +18,7 @@ import {
   SiAmazon,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+import { motion } from "framer-motion";
 const items = [
   {
     title: "About Me",
@@ -94,7 +97,13 @@ const items = [
 
 export default function AboutSection() {
   return (
-    <section id="about">
+    <motion.section 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ amount: 0.4, once: true }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      id="about"
+    >
       <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[20rem] p-10">
         {items.map((item, i) => (
           <BentoGridItem
@@ -105,6 +114,6 @@ export default function AboutSection() {
           />
         ))}
       </BentoGrid>
-    </section>
+    </motion.section>
   );
 }

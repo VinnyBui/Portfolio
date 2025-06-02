@@ -37,15 +37,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto pt-20 px-4 md:px-8 lg:px-10">
-        <motion.h1
-          className="text-4xl md:text-9xl mb-4 text-white font-bold font-boska"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ duration: 1 }}
-        >
+        <h1 className="text-4xl md:text-9xl mb-4 text-white font-bold font-boska">
           Experiences
-        </motion.h1>
+        </h1>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
           Highlights of my previous work experience.
         </p>

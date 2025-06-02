@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-
+import { motion } from "framer-motion";
 export default function ExperienceSection() {
   const data = [
     {
@@ -61,8 +63,15 @@ export default function ExperienceSection() {
     },
   ];
   return (
-    <div id="experience-section" className="w-full">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ amount: 0.3 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }} 
+      id="experience-section" 
+      className="w-full"
+    >
       <Timeline data={data} />
-    </div>
+    </motion.div>
   );
 }

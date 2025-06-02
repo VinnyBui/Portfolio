@@ -19,7 +19,7 @@ export default function ScrollAnimations() {
           }
         });
       },
-      { threshold: 0.4 } 
+      { threshold: 0.3 } 
     );
 
     const experienceSection = document.getElementById("experience-section");

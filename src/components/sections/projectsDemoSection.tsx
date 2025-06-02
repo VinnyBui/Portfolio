@@ -34,7 +34,14 @@ export default function ProjectsDemoSection() {
   };
 
   return (
-    <section id="project" className="my-20 mx-auto">
+    <motion.section 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ amount: 0.5 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      id="project" 
+      className="my-20 mx-auto"
+    >
       <div className="flex h-full flex-col md:flex-row gap-0">
         {/* Left Side */}
         <div className="flex flex-col gap-40 md:gap-64 px-8">
@@ -95,6 +102,6 @@ export default function ProjectsDemoSection() {
           </AnimatePresence>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

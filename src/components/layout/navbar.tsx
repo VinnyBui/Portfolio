@@ -3,6 +3,7 @@ import React from "react";
 import { MenuIcon } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent, SheetClose, SheetTitle } from "@/components/ui/sheet";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const handleScroll = (elementId: string) => {

@@ -84,7 +84,7 @@ export default function ProjectsDemoSection() {
                 <div className="mt-4">
                   <h2 className="text-xl md:text-2xl font-semibold">{project.name}</h2>
                   <p className="text-sm md:text-base mt-2">{project.demoDescription}</p>
-                  <Link href={`/projects?id=${project.id}`} className="mt-4 block">
+                  <Link href={`/projects/${project.id}`} className="mt-4 block">
                     <Button className="hover:bg-black hover:text-white text-black">
                       Read More
                     </Button>

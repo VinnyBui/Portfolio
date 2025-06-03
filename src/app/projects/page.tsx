@@ -1,11 +1,10 @@
 import React from "react";
-import { projects } from "@/lib/projectsData";
-import Image from "next/image";
+import ProjectScroll from "@/components/sections/projectsScrollSection";
 
 export default function ProjectsPage() {
   return (
-    <main>
-      
-    </main>
+    <div className="max-w-screen-xl mx-auto">
+      <ProjectScroll />
+    </div>
   );
 }

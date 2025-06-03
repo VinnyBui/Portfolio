@@ -16,7 +16,7 @@ const Navbar = () => {
         {/* Left Section */}
         <Link href="/" className="no-underline">
           <p>Software Developer</p>
-          <h2 className="font-semibold text-4xl md:text-5xl">Vinh Bui</h2>
+          <h2 className="font-bold text-4xl md:text-5xl font-boska">Vinh Bui</h2>
         </Link>
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex gap-10">

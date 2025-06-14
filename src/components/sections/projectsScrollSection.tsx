@@ -40,7 +40,13 @@ export default function ProjectScroll(){
   return (
     <>
       {/* Desktop Layout */}
-      <section ref={TargetRef} className="relative h-[200vh] hidden md:block">
+      <motion.section 
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        ref={TargetRef} 
+        className="relative h-[200vh] hidden md:block"
+      >
         <div className="sticky top-0 h-screen flex flex-col items-center overflow-hidden">
           <h1 className="text-6xl lg:text-9xl font-bold my-14">PROJECTS</h1>
           <motion.div 
@@ -85,10 +91,15 @@ export default function ProjectScroll(){
             ))}
           </motion.div>
         </div>
-      </section>
+      </motion.section>
       
       {/* Mobile Layout */}
-      <section className="py-8 px-4 md:hidden">
+      <motion.section 
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="py-8 px-4 md:hidden"
+      >
         <h1 className="text-4xl font-bold mb-8 text-center">PROJECTS</h1>
         <div className="flex flex-col gap-8">
           {projects.map((project) => (
@@ -127,7 +138,7 @@ export default function ProjectScroll(){
             </Link>
           ))}
         </div>
-      </section>
+      </motion.section>
     </>
   )
 }

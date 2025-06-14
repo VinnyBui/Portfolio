@@ -42,7 +42,7 @@ export default function ProjectsDemoSection() {
       id="project" 
       className="my-20 mx-auto"
     >
-      <div className="flex h-full flex-col md:flex-row gap-0">
+      <div className="flex h-full flex-col lg:flex-row gap-0">
         {/* Left Side */}
         <div className="flex flex-col gap-40 md:gap-64 px-8">
           <div className="flex justify-between text-xs md:text-base">
@@ -88,7 +88,7 @@ export default function ProjectsDemoSection() {
                     </div>    
                   )}
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 text-center">
                   <h2 className="text-xl md:text-2xl font-semibold">{project.name}</h2>
                   <p className="text-sm md:text-base mt-2">{project.demoDescription}</p>
                   <Link href={`/projects/${project.id}`} className="mt-4 block">

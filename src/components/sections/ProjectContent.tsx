@@ -3,7 +3,8 @@ import { Project } from "@/lib/projectsData";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FiGithub } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const getTechColor = (tech: string): string => {
@@ -149,7 +150,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
                 variant="outline" 
                 className="flex items-center gap-2 transition-all duration-300 hover:bg-black hover:text-white"
               >
-                <Github size={16} />
+                <FiGithub size={16} />
                 GitHub Repo
               </Button>
             </Link>

@@ -74,7 +74,7 @@ export default function ProjectScroll(){
                   </div>
                   <div className="w-1/2 relative">
                     <Image 
-                      src={project.image} 
+                      src={project.images[0]} 
                       alt={project.name} 
                       fill 
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -96,7 +96,7 @@ export default function ProjectScroll(){
               <div className="w-full border border-black shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-white">
                 <div className="relative w-full h-[200px]">
                   <Image 
-                    src={project.image} 
+                    src={project.images[0]} 
                     alt={project.name} 
                     fill 
                     className="object-cover"

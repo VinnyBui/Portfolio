@@ -2,13 +2,14 @@ import { projects } from "@/lib/projectsData";
 import ProjectContent from "@/components/sections/ProjectContent";
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export default function ProjectsPage({ params }: Props) {
-  const projectId = params.id;
+export default async function ProjectsPage({ params }: Props) {
+  const { id: projectId } = await params;
   const project = projects.find(p => p.id === projectId);
   
   if (!project) {

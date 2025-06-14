@@ -5,7 +5,7 @@ interface Project {
   images: string[];
   demoDescription: string;
   overviewDescription: string;
-  overviewLink: string;
+  overviewLink?: string;
   technologies?: string[];
   keyFeatures: string[];
   techStack: {
@@ -183,7 +183,7 @@ export const projects: Project[] = [
     images: ["/project-images/project-placeholder.png"],
     demoDescription: "Automation scripts that access device terminals and run diagnostic commands to validate the operational status of Cisco machines.",
     overviewDescription: "This project features a collection of automation scripts developed to test, configure, and validate Cisco network devices. The scripts interact directly with device terminals to run predefined diagnostic commands, helping streamline the QA process and ensure hardware is functioning correctly. These tools significantly reduce manual effort and improve consistency in network maintenance workflows.",
-    overviewLink: "https://github.com/VinnyBui/CiscoScript",
+    overviewLink: "",
     technologies: ["Python"],
     keyFeatures: [
       "Automated Testing: Run diagnostic commands automatically",

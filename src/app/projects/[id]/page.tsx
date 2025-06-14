@@ -116,12 +116,12 @@ export default function ProjectsPage({ params }: Props) {
           {project.images && project.images.length > 0 && (
             <div className="grid grid-cols-1 gap-4">
               {project.images.map((image, index) => (
-                <div key={index} className="relative aspect-video">
+                <div key={index} className="relative aspect-video group">
                   <Image 
                     src={image}
                     alt={`${project.name} screenshot ${index + 1}`}
                     fill
-                    className="object-contain rounded-lg"
+                    className="object-contain rounded-lg transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
               ))}
@@ -134,15 +134,23 @@ export default function ProjectsPage({ params }: Props) {
       <section className="mb-12">
         <h2 className="text-xl md:text-2xl font-semibold mb-4">🌐 Live Demo & Source Code</h2>
         <div className="flex gap-4">
-          <Link href={project.overviewLink} target="_blank">
-            <Button className="flex items-center gap-2">
-              <ExternalLink size={16} />
-              Live App
-            </Button>
-          </Link>
+          {project.overviewLink && (
+            <Link href={project.overviewLink} target="_blank">
+              <Button 
+                variant="outline" 
+                className="flex items-center gap-2 transition-all duration-300 hover:bg-black hover:text-white"
+              >
+                <ExternalLink size={16} />
+                Live App
+              </Button>
+            </Link>
+          )}
           {project.githubLink && (
             <Link href={project.githubLink} target="_blank">
-              <Button variant="outline" className="flex items-center gap-2">
+              <Button 
+                variant="outline" 
+                className="flex items-center gap-2 transition-all duration-300 hover:bg-black hover:text-white"
+              >
                 <Github size={16} />
                 GitHub Repo
               </Button>

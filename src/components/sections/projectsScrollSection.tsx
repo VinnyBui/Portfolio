@@ -49,8 +49,8 @@ export default function ProjectScroll(){
           >
             {projects.map((project) => (
               <Link href={`/projects/${project.id}`} key={project.id}>
-                <div className="w-[700px] h-[400px] flex flex-row overflow-hidden border border-black shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] group bg-white">
-                  <div className="w-1/2 p-8 flex flex-col justify-between">
+                <div className="w-[700px] h-[400px] flex flex-row overflow-hidden border border-black shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] group bg-white p-8">
+                  <div className="w-1/2  flex flex-col justify-between">
                     <div>
                       <h2 className="text-5xl font-bold font-boska mb-4">{project.name}</h2>
                       <p className="text-sm lg:text-base text-gray-700">
@@ -77,7 +77,7 @@ export default function ProjectScroll(){
                       src={project.images[0]} 
                       alt={project.name} 
                       fill 
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 </div>
@@ -93,16 +93,16 @@ export default function ProjectScroll(){
         <div className="flex flex-col gap-8">
           {projects.map((project) => (
             <Link href={`/projects/${project.id}`} key={project.id}>
-              <div className="w-full border border-black shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-white">
+              <div className="w-full border border-black shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-white p-8">
                 <div className="relative w-full h-[200px]">
                   <Image 
                     src={project.images[0]} 
                     alt={project.name} 
                     fill 
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
-                <div className="p-4">
+                <div>
                   <h2 className="text-xl font-bold mb-2">{project.name}</h2>
                   <p className="text-sm text-gray-700 mb-3">
                     {project.demoDescription}

@@ -98,9 +98,9 @@ export default function ProjectsPage({ params }: Props) {
       {/* Screenshots / Demo */}
       <section className="mb-12">
         <h2 className="text-xl md:text-2xl font-semibold mb-4">📸 Screenshots / Demo</h2>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col ">
           {project.media && (
-            <div className="relative aspect-video">
+            <div className="relative aspect-video mb-20">
               <video 
                 autoPlay 
                 loop 
@@ -121,7 +121,7 @@ export default function ProjectsPage({ params }: Props) {
                     src={image}
                     alt={`${project.name} screenshot ${index + 1}`}
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-contain rounded-lg"
                   />
                 </div>
               ))}

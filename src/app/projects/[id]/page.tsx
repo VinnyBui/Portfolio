@@ -1,5 +1,5 @@
 import { projects } from "@/lib/projectsData";
-import ProjectContent from "@/components/sections/ProjectContent";
+import ProjectContent from "@/components/sections/projectContent";
 
 type Props = {
   params: {

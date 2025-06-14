@@ -61,13 +61,13 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 
       {/* Overview Section */}
       <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">🔍 Overview</h2>
+        <h2 className="text-xl md:text-2xl mb-4 font-thin">Overview</h2>
         <p className="text-sm md:text-base text-gray-700">{project.overviewDescription}</p>
       </section>
 
       {/* Key Features */}
       <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">✨ Key Features</h2>
+        <h2 className="text-xl md:text-2xl font-thin mb-4">Key Features</h2>
         <ul className="list-disc pl-6 space-y-2 text-sm md:text-base">
           {project.keyFeatures.map((feature, index) => (
             <li key={index}>{feature}</li>
@@ -77,7 +77,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 
       {/* Tech Stack */}
       <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">🛠️ Tech Stack</h2>
+        <h2 className="text-xl md:text-2xl font-thin mb-4">Tech Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h3 className="font-semibold mb-2">Frontend</h3>
@@ -96,7 +96,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 
       {/* Screenshots / Demo */}
       <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">📸 Screenshots / Demo</h2>
+        <h2 className="text-xl md:text-2xl font-thin mb-4">Screenshots / Demo</h2>
         <div className="flex flex-col">
           {project.media && (
             <div className="relative aspect-video mb-20">
@@ -131,7 +131,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 
       {/* Live Demo & Source Code */}
       <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">🌐 Live Demo & Source Code</h2>
+        <h2 className="text-xl md:text-2xl font-thin mb-4">Live Demo & Source Code</h2>
         <div className="flex gap-4">
           {project.overviewLink && (
             <Link href={project.overviewLink} target="_blank">
@@ -160,7 +160,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 
       {/* My Role */}
       <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">🙋 My Role</h2>
+        <h2 className="text-xl md:text-2xl font-thin mb-4">My Role</h2>
         <ul className="list-disc pl-6 mt-2 space-y-2 text-sm md:text-base">
           {project.role.responsibilities.map((responsibility, index) => (
             <li key={index}>{responsibility}</li>
@@ -170,7 +170,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 
       {/* Challenges & Learnings */}
       <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">🧠 Challenges & Learnings</h2>
+        <h2 className="text-xl md:text-2xl font-thin mb-4">Challenges & Learnings</h2>
         <ul className="list-disc pl-6 space-y-2 text-sm md:text-base">
           {project.challenges.map((challenge, index) => (
             <li key={index}>{challenge}</li>
@@ -180,7 +180,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 
       {/* Future Improvements */}
       <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">🚀 Future Improvements</h2>
+        <h2 className="text-xl md:text-2xl font-thin mb-4">Future Improvements</h2>
         <ul className="list-disc pl-6 space-y-2 text-sm md:text-base">
           {project.futureImprovements.map((improvement, index) => (
             <li key={index}>{improvement}</li>

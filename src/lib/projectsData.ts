@@ -55,7 +55,8 @@ export const projects: Project[] = [
     challenges: [
       "Working with Firebase taught me how to structure NoSQL data efficiently and handle real-time sync between the UI and backend",
       "I improved my React state management and modular component design by breaking the app into clean, reusable parts",
-      "Learned how to implement user auth and protect routes in a single-page app"
+      "Learned how to implement user auth and protect routes",
+      "Managing data and syncing it between the UI and backend was difficult at first, but I was able to overcome it by watching tutorials and practicing."
     ],
     futureImprovements: [
       "Export inventory reports to CSV",
@@ -131,6 +132,7 @@ export const projects: Project[] = [
     challenges: [
       "Balanced aesthetic design with business requirements",
       "Optimized for mobile-first user experience",
+      "I had difficulty with designing the UI and incorporating animations and transitions but I was able to execute the website by looking for inspiration and examples online."
     ],
     futureImprovements: [
       "Add online booking system integration",
@@ -167,13 +169,14 @@ export const projects: Project[] = [
       ]
     },
     challenges: [
-      "Integrated email system with Firebase backend",
+      "Creating the shopping cart was difficult, I had to keep track of the items in the cart and update the UI accordingly.",
       "Optimized product search and filtering",
     ],
     futureImprovements: [
       "Add product comparison feature",
       "Implement saved favorites list",
-      "Improve secure cart management"
+      "Improve cart management",
+      "Improve UI/UX"
     ]
   },
   { 

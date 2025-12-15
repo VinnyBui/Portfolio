@@ -7,9 +7,13 @@ export async function POST() {
       headers: {
         'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
         'Content-Type': 'application/json',
+        'OpenAI-Beta': 'chatkit_beta=v1',
       },
       body: JSON.stringify({
-        workflow_id: process.env.NEXT_PUBLIC_CHATKIT_WORKFLOW_ID,
+        workflow: {
+          id: process.env.NEXT_PUBLIC_CHATKIT_WORKFLOW_ID,
+        },
+        user: 'portfolio-visitor',
       }),
     });
 
@@ -18,9 +22,8 @@ export async function POST() {
     }
 
     const data = await response.json();
-    return NextResponse.json({ clientToken: data.client_token });
+    return NextResponse.json({ client_secret: data.client_secret });
   } catch (error) {
-    console.error('Error creating ChatKit session:', error);
     return NextResponse.json(
       { error: 'Failed to create session' },
       { status: 500 }

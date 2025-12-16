@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChatKit, useChatKit } from '@openai/chatkit-react';
 import { X, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,6 +10,7 @@ export default function ChatKitWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [isChatReady, setIsChatReady] = useState(false);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   const { control } = useChatKit({
     api: {
@@ -75,8 +76,44 @@ export default function ChatKitWidget() {
   const handleOpenChat = () => {
     setIsOpen(true);
     setIsChatReady(false);
-    setTimeout(() => setIsChatReady(true), 800);
   };
+
+  // Detect when ChatKit content is actually rendered
+  useEffect(() => {
+    if (!isOpen || isChatReady) return;
+
+    const checkChatReady = () => {
+      if (chatContainerRef.current) {
+        const chatContent = chatContainerRef.current.querySelector('[data-chatkit-root], [class*="chatkit"], form, textarea');
+        if (chatContent) {
+          setIsChatReady(true);
+          return true;
+        }
+      }
+      return false;
+    };
+
+    // Try immediately
+    if (checkChatReady()) return;
+
+    // Poll for ChatKit content to appear
+    const intervalId = setInterval(() => {
+      if (checkChatReady()) {
+        clearInterval(intervalId);
+      }
+    }, 50);
+
+    // Fallback timeout
+    const timeoutId = setTimeout(() => {
+      clearInterval(intervalId);
+      setIsChatReady(true);
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+    };
+  }, [isOpen, isChatReady]);
 
   // Pre-load session on mount for instant chat
   useEffect(() => {
@@ -155,56 +192,70 @@ export default function ChatKitWidget() {
 
               {/* ChatKit Component */}
               <div className="flex-1 overflow-hidden relative">
-                {!isChatReady ? (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-white">
-                    <div className="relative">
-                      {/* Animated coffee cup */}
-                      <motion.div
-                        animate={{
-                          y: [0, -10, 0],
-                        }}
-                        transition={{
-                          duration: 1.5,
-                          repeat: Infinity,
-                          ease: "easeInOut"
-                        }}
-                      >
-                        <Image src="/cup.png" alt="Coffee cup" width={48} height={48} className="w-12 h-12" />
-                      </motion.div>
-
-                      {/* Steam animation */}
-                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-1">
-                        {[0, 1, 2].map((i) => (
-                          <motion.div
-                            key={i}
-                            className="w-1 h-3 bg-primary/30 rounded-full"
-                            animate={{
-                              y: [-5, -15],
-                              opacity: [0.6, 0],
-                              scale: [1, 0.8],
-                            }}
-                            transition={{
-                              duration: 1.5,
-                              repeat: Infinity,
-                              delay: i * 0.2,
-                              ease: "easeOut"
-                            }}
-                          />
-                        ))}
-                      </div>
-                    </div>
-
-                    <motion.p
-                      className="mt-6 text-gray-600 font-chubbo"
-                      animate={{ opacity: [0.5, 1, 0.5] }}
-                      transition={{ duration: 2, repeat: Infinity }}
+                {/* Loading animation overlay */}
+                <AnimatePresence>
+                  {!isChatReady && (
+                    <motion.div
+                      initial={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.4 }}
+                      className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10"
                     >
-                      Brewing your chat...
-                    </motion.p>
-                  </div>
-                ) : (
+                      <div className="relative">
+                        {/* Animated coffee cup */}
+                        <motion.div
+                          animate={{
+                            y: [0, -10, 0],
+                          }}
+                          transition={{
+                            duration: 1.5,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        >
+                          <Image src="/cup.png" alt="Coffee cup" width={48} height={48} className="w-12 h-12" />
+                        </motion.div>
+
+                        {/* Steam animation */}
+                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-1">
+                          {[0, 1, 2].map((i) => (
+                            <motion.div
+                              key={i}
+                              className="w-1 h-3 bg-primary/30 rounded-full"
+                              animate={{
+                                y: [-5, -15],
+                                opacity: [0.6, 0],
+                                scale: [1, 0.8],
+                              }}
+                              transition={{
+                                duration: 1.5,
+                                repeat: Infinity,
+                                delay: i * 0.2,
+                                ease: "easeOut"
+                              }}
+                            />
+                          ))}
+                        </div>
+                      </div>
+
+                      <motion.p
+                        className="mt-6 text-gray-600 font-chubbo"
+                        animate={{ opacity: [0.5, 1, 0.5] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      >
+                        Brewing your chat...
+                      </motion.p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {/* ChatKit always rendered but hidden until ready */}
+                <div
+                  ref={chatContainerRef}
+                  className={`w-full h-full transition-opacity duration-300 ${isChatReady ? 'opacity-100' : 'opacity-0'}`}
+                >
                   <ChatKit control={control} className="w-full h-full" />
-                )}
+                </div>
               </div>
             </motion.div>
         )}

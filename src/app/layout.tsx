@@ -28,7 +28,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <ChatWidget />
-        <Analytics/>
+        <Analytics />
       </body>
     </html>
   );

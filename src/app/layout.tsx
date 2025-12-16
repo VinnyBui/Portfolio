@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/features/ChatWidget";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Vinh Bui | Portfolio",
@@ -27,6 +28,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <ChatWidget />
+        <Analytics/>
       </body>
     </html>
   );

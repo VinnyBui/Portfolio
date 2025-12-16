@@ -1,6 +1,9 @@
 import Navbar from "@/components/layout/navbar";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
+import ChatWidget from "@/components/features/ChatWidget";
+import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Vinh Bui | Portfolio",
@@ -15,11 +18,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen">
+        <Script
+          src="https://cdn.platform.openai.com/deployments/chatkit/chatkit.js"
+          async
+        />
         <Navbar />
         <main className="flex-1">
-          {children} 
+          {children}
         </main>
         <Footer />
+        <ChatWidget />
+        <Analytics/>
       </body>
     </html>
   );

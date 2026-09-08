@@ -16,6 +16,7 @@ import {
   SiGit,
   SiGithub,
   SiAmazon,
+  SiSupabase,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { motion } from "framer-motion";
@@ -58,6 +59,7 @@ const items = [
         <strong className="block mt-3">Backend & Cloud:</strong>
         <div className="flex items-center gap-3 mt-2 flex-wrap">
           <SiFirebase size={24} title="Firebase (Firestore, Auth)" />
+          <SiSupabase size={24} title="Supabase" />
           <SiAmazon size={24} title="AWS (Learning)" />
         </div>    
 

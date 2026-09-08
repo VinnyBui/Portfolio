@@ -44,18 +44,19 @@ export const projects: Project[] = [
       deployment: ["Firebase Hosting"]
     },
     role: {
-      description: "I built this entire project independently:",
+      description: "Sole developer responsible for architecting and delivering the company's entire inventory management system from the ground up:",
       responsibilities: [
-        "Designed the UI using TailwindCSS and implemented all pages with React",
-        "Set up Firebase for real-time database functionality and authentication",
-        "Handled deployment and optimized for performance using Vite and Vercel"
+        "Designed and built the complete system architecture, including database schema, authentication, and all business logic",
+        "Developed the full admin dashboard UI with React and TailwindCSS, enabling staff to manage inventory through a clean, role-protected interface",
+        "Integrated Firebase Realtime Database to support live inventory sync across sessions without page refreshes",
+        "Implemented secure user authentication with Firebase Auth and route-level access control to restrict the system to authorized personnel",
+        "Deployed and maintained the application on Firebase Hosting, ensuring reliability for day-to-day business operations"
       ]
     },
     challenges: [
-      "Working with Firebase taught me how to structure NoSQL data efficiently and handle real-time sync between the UI and backend",
-      "I improved my React state management and modular component design by breaking the app into clean, reusable parts",
-      "Learned how to implement user auth and protect routes",
-      "Managing data and syncing it between the UI and backend was difficult at first, but I was able to overcome it by watching tutorials and practicing."
+      "Designing the data model from scratch required defining the full structure of each entity. Translating these relational concepts into Firestore's document-based model deepened my understanding of NoSQL schema design and its performance trade-offs",
+      "Managing application state across multiple components introduced complexity early on; resolving this led to a more disciplined approach to React state management and a stronger emphasis on modular, reusable component design",
+      "Implementing authentication and route-level access control was a new challenge that required understanding both Firebase Auth's lifecycle and React Router's guard patterns to ensure only authorized users could access sensitive areas of the system",
     ],
     futureImprovements: [
       "Export inventory reports to CSV",

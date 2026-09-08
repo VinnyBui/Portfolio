@@ -18,6 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen">
+        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f=clash-display@400,500,600,700&f=chubbo@400,500,700&f=boska@400&display=swap"
+        />
         <Script
           src="https://cdn.platform.openai.com/deployments/chatkit/chatkit.js"
           async

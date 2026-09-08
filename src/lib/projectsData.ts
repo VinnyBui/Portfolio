@@ -85,15 +85,18 @@ export const projects: Project[] = [
       deployment: ["Vercel"]
     },
     role: {
-      description: "I developed this portfolio website from concept to deployment:",
+      description: "Sole designer and developer responsible for conceiving, building, and deploying this portfolio from scratch:",
       responsibilities: [
-        "Designed and implemented the entire UI/UX",
-        "Optimized performance and SEO",
+        "Architected the full site structure using Next.js App Router, establishing routing, layout, and page organization from the ground up",
+        "Designed and implemented the complete UI/UX, including responsive layouts, typography, and a consistent visual identity across all sections",
+        "Integrated Framer Motion to build fluid page transitions and scroll-driven animations that enhance the overall user experience",
+        "Optimized for performance",
+        "Deployed and maintained the site on Vercel"
       ]
     },
     challenges: [
-      "Learning Next.js was a challenge, but I was able to pick it up quickly. My biggest challenge was learning how to use the App Router and the new features it introduced.",
-      "Incorporating animations and transition was a difficult task, but I was able to overcome it by watching tutorials and practicing. I also learned how to use the Framer Motion library to create animations.",
+      "Adopting Next.js App Router, understanding server components, layout nesting, and the new data-fetching patterns took deliberate effort to apply correctly",
+      "Implementing cohesive, performant animations across the site",
     ],
     futureImprovements: [
       "Add dark mode support",
@@ -122,17 +125,18 @@ export const projects: Project[] = [
       deployment: ["Vercel"]
     },
     role: {
-      description: "I developed this business website end-to-end:",
+      description: "Sole developer responsible for designing and delivering a complete client-facing business website from concept to launch:",
       responsibilities: [
-        "Created responsive design and implemented UI components",
-        "Set up SEO optimization and analytics",
-        "Configured deployment and hosting"
+        "Translated the client's brand and business needs into a clean, professional visual design with no prior design assets provided",
+        "Built the full site with Next.js and TailwindCSS, implementing responsive layouts optimized for mobile-first browsing",
+        "Integrated contact and appointment inquiry functionality to enable potential clients to reach out directly through the site",
+        "Deployed and handed off the site on Vercel, ensuring a stable production environment the client could rely on"
       ]
     },
     challenges: [
-      "Balanced aesthetic design with business requirements",
-      "Optimized for mobile-first user experience",
-      "I had difficulty with designing the UI and incorporating animations and transitions but I was able to execute the website by looking for inspiration and examples online."
+      "Working directly with a client for the first time and translating informal, non-technical feedback into concrete design and functionality decisions",
+      "Designing a visually appealing site without a provided design system or brand guidelines, balancing the client's preferences with sound UI principles",
+      "Incorporating animations and transitions in a way that felt polished"
     ],
     futureImprovements: [
       "Add online booking system integration",

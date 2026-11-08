@@ -15,11 +15,11 @@ import {
   SiCplusplus,
   SiGit,
   SiGithub,
-  SiAmazon,
   SiSupabase,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 const items = [
   {
     title: "About Me",
@@ -60,7 +60,7 @@ const items = [
         <div className="flex items-center gap-3 mt-2 flex-wrap">
           <SiFirebase size={24} title="Firebase (Firestore, Auth)" />
           <SiSupabase size={24} title="Supabase" />
-          <SiAmazon size={24} title="AWS (Learning)" />
+          <FaAws size={24} title="AWS (Learning)" />
         </div>    
 
         <strong className="block mt-3">Tools:</strong>

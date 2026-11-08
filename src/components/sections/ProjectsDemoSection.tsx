@@ -4,7 +4,7 @@ import PaginationSelector from "@/components/ui/pageSelector";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { projects } from "@/lib/projectsData";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function ProjectsDemoSection() {
   const [currentPage, setCurrentPage] = useState(1);

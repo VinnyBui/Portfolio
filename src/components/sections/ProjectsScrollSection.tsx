@@ -3,7 +3,7 @@ import { projects } from "@/lib/projectsData";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 
 const getTechColor = (tech: string): string => {
   switch (tech.toLowerCase()) {

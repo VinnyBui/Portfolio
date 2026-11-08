@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { FiGithub } from "react-icons/fi";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const getTechColor = (tech: string): string => {
   switch (tech.toLowerCase()) {

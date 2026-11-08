@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectScroll from "@/components/sections/projectsScrollSection";
+import ProjectScroll from "@/components/sections/ProjectsScrollSection";
 
 export default function ProjectsPage() {
   return (

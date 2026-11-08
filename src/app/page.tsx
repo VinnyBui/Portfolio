@@ -1,7 +1,7 @@
-import HeroSection from "@/components/sections/heroSection";
-import AboutSection from "@/components/sections/aboutSection";
-import ExperienceSection from "@/components/sections/experienceSection";
-import ProjectsDemoSection from "@/components/sections/projectsDemoSection";
+import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import ProjectsDemoSection from "@/components/sections/ProjectsDemoSection";
 import ScrollAnimations from "@/components/features/ScrollAnimations";
 
 export default function Home() {

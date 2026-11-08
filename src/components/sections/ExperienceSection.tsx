@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { experienceData } from "@/lib/experienceData";
 
 export default function ExperienceSection() {

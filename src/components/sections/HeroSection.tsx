@@ -1,13 +1,13 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const textVariants = {
   hidden: { opacity: 0},
   visible: (delay: number) => ({
     opacity: 1,
-    transition: {delay, duration: 0.5, ease: "easeOut"},
+    transition: {delay, duration: 0.5, ease: "easeOut" as const},
   }),
 };
 

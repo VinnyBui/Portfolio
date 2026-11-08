@@ -16,6 +16,7 @@ import {
   SiGit,
   SiGithub,
   SiAmazon,
+  SiSupabase,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { motion } from "framer-motion";
@@ -25,7 +26,7 @@ const items = [
     description: (
       <div>
         <p>
-          Hello, my name is Vinh Bui, a <strong>software developer</strong> based in Orange County, with a passion for building efficient and impactful web applications. I specialize in <strong>web development</strong> and enjoy building <strong>modern, responsive web applications</strong>. I also have experience in <strong>automation</strong>, <strong>scripting</strong>, and enjoy solving real-world problems through code.<br/><br/>
+          Hello, my name is Vinh Bui, a <strong>software engineer</strong> based in Orange County, with a passion for building efficient and impactful web applications. I specialize in <strong>web development</strong> and enjoy building <strong>modern, responsive web applications</strong>. I also have experience in <strong>automation</strong>, <strong>scripting</strong>, and enjoy solving real-world problems through code.<br/><br/>
         </p>
         <p>
           My expertise includes <strong>React</strong>, <strong>Next.js</strong>, <strong>Firebase</strong>, and <strong>Python</strong>, and I&apos;m actively expanding my skills with <strong>AWS</strong>. I also have hands-on experience automating network configurations for <strong>Cisco</strong> devices. I'm always eager to learn, grow, and tackle new challenges in software development, automation, and data-driven solutions.
@@ -58,6 +59,7 @@ const items = [
         <strong className="block mt-3">Backend & Cloud:</strong>
         <div className="flex items-center gap-3 mt-2 flex-wrap">
           <SiFirebase size={24} title="Firebase (Firestore, Auth)" />
+          <SiSupabase size={24} title="Supabase" />
           <SiAmazon size={24} title="AWS (Learning)" />
         </div>    
 

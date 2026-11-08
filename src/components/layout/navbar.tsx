@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="flex justify-between py-4 mt-20 border-t items-center md:items-start relative">
         {/* Left Section */}
         <Link href="/" className="no-underline">
-          <p>Software Developer</p>
+          <p>Software Engineer</p>
           <h2 className="font-bold text-4xl md:text-5xl font-boska">Vinh Bui</h2>
         </Link>
         {/* Desktop Navigation Links */}

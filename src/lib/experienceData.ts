@@ -18,7 +18,7 @@ export const experienceData: ExperienceYear[] = [
       {
         company: "Coding Minds",
         role: "Coding Instructor",
-        period: "April 2025 - Current",
+        period: "April 2025 - August 2026",
         description: "",
         responsibilities: [
           "Deliver one-on-one coding instruction to K through 12 students, tailoring lessons to individual learning styles and skill levels.",
@@ -33,7 +33,7 @@ export const experienceData: ExperienceYear[] = [
     experiences: [
       {
         company: "ProNetworks",
-        role: "Web Developer",
+        role: "Software Engineer",
         period: "January 2024 - March 2025",
         description: "Started to take more responsibilities at ProNetworks.",
         responsibilities: [

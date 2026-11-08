@@ -95,68 +95,72 @@ export default function ProjectContent({ project }: ProjectContentProps) {
       </section>
 
       {/* Screenshots / Demo */}
-      <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-thin mb-4">Screenshots / Demo</h2>
-        <div className="flex flex-col">
-          {project.media && (
-            <div className="relative aspect-video mb-20">
-              <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                className="w-full h-full object-cover rounded-lg"
-              >
-                <source src={project.media} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          )}
-          {project.images && project.images.length > 0 && (
-            <div className="grid grid-cols-1 gap-4">
-              {project.images.map((image, index) => (
-                <div key={index} className="relative aspect-video group">
-                  <Image 
-                    src={image}
-                    alt={`${project.name} screenshot ${index + 1}`}
-                    fill
-                    className="object-contain rounded-lg transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+      {(project.media || (project.images && project.images.length > 0)) && (
+        <section className="mb-12">
+          <h2 className="text-xl md:text-2xl font-thin mb-4">Screenshots / Demo</h2>
+          <div className="flex flex-col">
+            {project.media && (
+              <div className="relative aspect-video mb-20">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover rounded-lg"
+                >
+                  <source src={project.media} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            )}
+            {project.images && project.images.length > 0 && (
+              <div className="grid grid-cols-1 gap-4">
+                {project.images.map((image, index) => (
+                  <div key={index} className="relative aspect-video group">
+                    <Image
+                      src={image}
+                      alt={`${project.name} screenshot ${index + 1}`}
+                      fill
+                      className="object-contain rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Live Demo & Source Code */}
-      <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-thin mb-4">Live Demo & Source Code</h2>
-        <div className="flex gap-4">
-          {project.overviewLink && (
-            <Link href={project.overviewLink} target="_blank">
-              <Button 
-                variant="outline" 
-                className="flex items-center gap-2 transition-all duration-300 hover:bg-black hover:text-white"
-              >
-                <ExternalLink size={16} />
-                Live App
-              </Button>
-            </Link>
-          )}
-          {project.githubLink && (
-            <Link href={project.githubLink} target="_blank">
-              <Button 
-                variant="outline" 
-                className="flex items-center gap-2 transition-all duration-300 hover:bg-black hover:text-white"
-              >
-                <FiGithub size={16} />
-                GitHub Repo
-              </Button>
-            </Link>
-          )}
-        </div>
-      </section>
+      {(project.overviewLink || project.githubLink) && (
+        <section className="mb-12">
+          <h2 className="text-xl md:text-2xl font-thin mb-4">Live Demo & Source Code</h2>
+          <div className="flex gap-4">
+            {project.overviewLink && (
+              <Link href={project.overviewLink} target="_blank">
+                <Button
+                  variant="outline"
+                  className="flex items-center gap-2 transition-all duration-300 hover:bg-black hover:text-white"
+                >
+                  <ExternalLink size={16} />
+                  Live App
+                </Button>
+              </Link>
+            )}
+            {project.githubLink && (
+              <Link href={project.githubLink} target="_blank">
+                <Button
+                  variant="outline"
+                  className="flex items-center gap-2 transition-all duration-300 hover:bg-black hover:text-white"
+                >
+                  <FiGithub size={16} />
+                  GitHub Repo
+                </Button>
+              </Link>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* My Role */}
       <section className="mb-12">
@@ -178,15 +182,6 @@ export default function ProjectContent({ project }: ProjectContentProps) {
         </ul>
       </section>
 
-      {/* Future Improvements */}
-      <section className="mb-12">
-        <h2 className="text-xl md:text-2xl font-thin mb-4">Future Improvements</h2>
-        <ul className="list-disc pl-6 space-y-2 text-sm md:text-base">
-          {project.futureImprovements.map((improvement, index) => (
-            <li key={index}>{improvement}</li>
-          ))}
-        </ul>
-      </section>
     </motion.div>
   );
 } 

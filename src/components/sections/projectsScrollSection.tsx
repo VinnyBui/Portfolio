@@ -79,12 +79,16 @@ export default function ProjectScroll(){
                     </div>
                   </div>
                   <div className="w-1/2 relative">
-                    <Image 
-                      src={project.images[0]} 
-                      alt={project.name} 
-                      fill 
-                      className="object-contain transition-transform duration-500 group-hover:scale-105"
-                    />
+                    {project.images[0] ? (
+                      <Image
+                        src={project.images[0]}
+                        alt={project.name}
+                        fill
+                        className="object-contain transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="h-full flex items-center justify-center text-gray-400 text-sm">No preview</div>
+                    )}
                   </div>
                 </div>
               </Link>
@@ -105,14 +109,16 @@ export default function ProjectScroll(){
           {projects.map((project) => (
             <Link href={`/projects/${project.id}`} key={project.id}>
               <div className="w-full border border-black shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-white p-8">
-                <div className="relative w-full h-[200px]">
-                  <Image 
-                    src={project.images[0]} 
-                    alt={project.name} 
-                    fill 
-                    className="object-contain"
-                  />
-                </div>
+                {project.images[0] && (
+                  <div className="relative w-full h-[200px]">
+                    <Image
+                      src={project.images[0]}
+                      alt={project.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                )}
                 <div>
                   <h2 className="text-xl font-bold mb-2">{project.name}</h2>
                   <p className="text-sm text-gray-700 mb-3">

@@ -26,11 +26,10 @@ export const projects: Project[] = [
   { 
     id: "1", 
     name: "Inventory Management System", 
-    media: "/p2.mp4",
-    images: ["/project-images/project1.png", "/project-images/project1-2.png", "/project-images/project1-3.png", "/project-images/project1-4.png"],
+    media: "",
+    images: [],
     demoDescription: "An admin-facing dashboard where authenticated users can securely create, edit, and delete inventory data.",
     overviewDescription: "The Inventory Management System is a secure, real-time platform built for internal administrative use. It allows authorized personnel to manage inventory through authentication-protected access, enabling streamlined operations such as adding, updating, and deleting product data. The system prioritizes security, usability, and efficient data handling.",
-    overviewLink: "https://we-buy-cisco.com/",
     technologies: ["Firebase", "Vite", "React"],
     keyFeatures: [
       "Add / Edit / Delete Products: Manage inventory with full CRUD functionality",
@@ -45,18 +44,19 @@ export const projects: Project[] = [
       deployment: ["Firebase Hosting"]
     },
     role: {
-      description: "I built this entire project independently:",
+      description: "Sole developer responsible for architecting and delivering the company's entire inventory management system from the ground up:",
       responsibilities: [
-        "Designed the UI using TailwindCSS and implemented all pages with React",
-        "Set up Firebase for real-time database functionality and authentication",
-        "Handled deployment and optimized for performance using Vite and Vercel"
+        "Designed and built the complete system architecture, including database schema, authentication, and all business logic",
+        "Developed the full admin dashboard UI with React and TailwindCSS, enabling staff to manage inventory through a clean, role-protected interface",
+        "Integrated Firebase Realtime Database to support live inventory sync across sessions without page refreshes",
+        "Implemented secure user authentication with Firebase Auth and route-level access control to restrict the system to authorized personnel",
+        "Deployed and maintained the application on Firebase Hosting, ensuring reliability for day-to-day business operations"
       ]
     },
     challenges: [
-      "Working with Firebase taught me how to structure NoSQL data efficiently and handle real-time sync between the UI and backend",
-      "I improved my React state management and modular component design by breaking the app into clean, reusable parts",
-      "Learned how to implement user auth and protect routes",
-      "Managing data and syncing it between the UI and backend was difficult at first, but I was able to overcome it by watching tutorials and practicing."
+      "Designing the data model from scratch required defining the full structure of each entity. Translating these relational concepts into Firestore's document-based model deepened my understanding of NoSQL schema design and its performance trade-offs",
+      "Managing application state across multiple components introduced complexity early on; resolving this led to a more disciplined approach to React state management and a stronger emphasis on modular, reusable component design",
+      "Implementing authentication and route-level access control was a new challenge that required understanding both Firebase Auth's lifecycle and React Router's guard patterns to ensure only authorized users could access sensitive areas of the system",
     ],
     futureImprovements: [
       "Export inventory reports to CSV",
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     id: "2", 
     name: "Portfolio", 
     media: "",
-    images: ["/project-images/project2.png", "/project-images/project2-2.png"],
+    images: [],
     demoDescription: "A personal developer portfolio showcasing projects, skills, and experience through an interactive and responsive UI.",
     overviewDescription: "This personal portfolio website is built to highlight my work as a developer. It features an elegant, responsive design and includes sections for featured projects, technologies, and contact information. The site is optimized for performance and accessibility, and it integrates modern web technologies to create a smooth user experience.",
     overviewLink: "https://www.vinhbui.dev/",
@@ -85,15 +85,18 @@ export const projects: Project[] = [
       deployment: ["Vercel"]
     },
     role: {
-      description: "I developed this portfolio website from concept to deployment:",
+      description: "Sole designer and developer responsible for conceiving, building, and deploying this portfolio from scratch:",
       responsibilities: [
-        "Designed and implemented the entire UI/UX",
-        "Optimized performance and SEO",
+        "Architected the full site structure using Next.js App Router, establishing routing, layout, and page organization from the ground up",
+        "Designed and implemented the complete UI/UX, including responsive layouts, typography, and a consistent visual identity across all sections",
+        "Integrated Framer Motion to build fluid page transitions and scroll-driven animations that enhance the overall user experience",
+        "Optimized for performance",
+        "Deployed and maintained the site on Vercel"
       ]
     },
     challenges: [
-      "Learning Next.js was a challenge, but I was able to pick it up quickly. My biggest challenge was learning how to use the App Router and the new features it introduced.",
-      "Incorporating animations and transition was a difficult task, but I was able to overcome it by watching tutorials and practicing. I also learned how to use the Framer Motion library to create animations.",
+      "Adopting Next.js App Router, understanding server components, layout nesting, and the new data-fetching patterns took deliberate effort to apply correctly",
+      "Implementing cohesive, performant animations across the site",
     ],
     futureImprovements: [
       "Add dark mode support",
@@ -105,7 +108,7 @@ export const projects: Project[] = [
     id: "3", 
     name: "SilkLash Nbrow", 
     media: "",
-    images: ["/project-images/project3.png", "/project-images/project3-2.png"],
+    images: [],
     demoDescription: "A modern, mobile-responsive website designed to help a local lash technician showcase services, attract new clients, and grow her beauty business.",
     overviewDescription: "SilkLash Nbrow is a clean and elegant business website built for a local lash technician to establish an online presence and attract clientele. The site highlights services, pricing, and contact information, with a strong focus on mobile usability and SEO optimization to drive local discovery. Designed with simplicity and professionalism in mind, it enables potential clients to quickly learn about offerings and book appointments.",
     overviewLink: "https://www.silklashnbrow.com/",
@@ -122,102 +125,22 @@ export const projects: Project[] = [
       deployment: ["Vercel"]
     },
     role: {
-      description: "I developed this business website end-to-end:",
+      description: "Sole developer responsible for designing and delivering a complete client-facing business website from concept to launch:",
       responsibilities: [
-        "Created responsive design and implemented UI components",
-        "Set up SEO optimization and analytics",
-        "Configured deployment and hosting"
+        "Translated the client's brand and business needs into a clean, professional visual design with no prior design assets provided",
+        "Built the full site with Next.js and TailwindCSS, implementing responsive layouts optimized for mobile-first browsing",
+        "Integrated contact and appointment inquiry functionality to enable potential clients to reach out directly through the site",
+        "Deployed and handed off the site on Vercel, ensuring a stable production environment the client could rely on"
       ]
     },
     challenges: [
-      "Balanced aesthetic design with business requirements",
-      "Optimized for mobile-first user experience",
-      "I had difficulty with designing the UI and incorporating animations and transitions but I was able to execute the website by looking for inspiration and examples online."
+      "Working directly with a client for the first time and translating informal, non-technical feedback into concrete design and functionality decisions",
+      "Designing a visually appealing site without a provided design system or brand guidelines, balancing the client's preferences with sound UI principles",
+      "Incorporating animations and transitions in a way that felt polished"
     ],
     futureImprovements: [
       "Add online booking system integration",
       "Implement customer reviews section",
     ]
   },
-  { 
-    id: "4", 
-    name: "WeBuyCisco Inventory Catalog", 
-    media: "/p1.mp4",
-    images: ["/project-images/project4.png", "/project-images/project4-2.png", "/project-images/project4-3.png"],
-    demoDescription: "A customer-facing interface that allows users to browse available inventory, add items to a cart, and send inquiries via email.",
-    overviewDescription: "The WeBuyCisco Inventory Catalog is a public-facing platform designed to showcase available inventory to potential customers. It offers a seamless browsing experience, allowing users to explore products, add items to a cart, and submit order inquiries via email. The system streamlines communication between customers and sales teams without enabling direct online purchases.",
-    overviewLink: "https://we-buy-cisco.com/",
-    technologies: ["Firebase", "JavaScript", "React"],
-    keyFeatures: [
-      "Product Catalog: Browse and search inventory",
-      "Shopping Cart: Add items and manage selections",
-      "Email Integration: Submit inquiries directly",
-      "Responsive Design: Works on all devices",
-      "Real-time Updates: Live inventory status"
-    ],
-    techStack: {
-      frontend: ["React", "JavaScript", "TailwindCSS", "Framer Motion"],
-      backend: ["Firebase"],
-      deployment: ["Firebase Hosting"]
-    },
-    role: {
-      description: "I developed the customer-facing catalog system:",
-      responsibilities: [
-        "Built the product browsing interface",
-        "Implemented cart functionality",
-        "Set up email integration for inquiries"
-      ]
-    },
-    challenges: [
-      "Creating the shopping cart was difficult, I had to keep track of the items in the cart and update the UI accordingly.",
-      "Optimized product search and filtering",
-    ],
-    futureImprovements: [
-      "Add product comparison feature",
-      "Implement saved favorites list",
-      "Improve cart management",
-      "Improve UI/UX"
-    ]
-  },
-  { 
-    id: "5", 
-    name: "Scripts for Cisco Networks", 
-    media: "",
-    images: ["/project-images/project-placeholder.png"],
-    demoDescription: "Automation scripts that access device terminals and run diagnostic commands to validate the operational status of Cisco machines.",
-    overviewDescription: "This project features a collection of automation scripts developed to test, configure, and validate Cisco network devices. The scripts interact directly with device terminals to run predefined diagnostic commands, helping streamline the QA process and ensure hardware is functioning correctly. These tools significantly reduce manual effort and improve consistency in network maintenance workflows.",
-    overviewLink: "",
-    technologies: ["Python"],
-    keyFeatures: [
-      "Automated Testing: Run diagnostic commands automatically",
-      "Device Validation: Check operational status",
-      "Batch Processing: Handle multiple devices",
-      "Error Handling: Robust error detection",
-      "Logging System: Track execution results"
-    ],
-    techStack: {
-      frontend: ["Python CLI"],
-      backend: ["Python"],
-      deployment: ["Local"]
-    },
-    role: {
-      description: "I developed these automation scripts:",
-      responsibilities: [
-        "Created Python scripts for device interaction",
-        "Implemented error handling and logging",
-        "Documented usage and setup procedures"
-      ]
-    },
-    challenges: [
-      "Mastered Cisco device communication protocols",
-      "Implemented robust error handling",
-      "Optimized script performance for large networks"
-    ],
-    futureImprovements: [
-      "Add GUI interface",
-      "Implement parallel processing",
-      "Add more device type support"
-    ],
-    githubLink: "https://github.com/VinnyBui/CiscoScript"
-  }
 ];
